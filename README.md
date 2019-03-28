@@ -8,6 +8,7 @@ It's an employee management system which facilitates the administrative work of 
 
 ## Features
 (must)
+
 1. Create new employee with employee's data(e.g. ID, Name, Age, Role/Job Position, Salary)
 2. Search for & delete employees' data by ID, Name or Role (or any other uniqle info./ key field)
 3. Fire an employee
@@ -16,6 +17,7 @@ It's an employee management system which facilitates the administrative work of 
 6. Add self-define field/attributes
 
 (Undecided yet)
+
 7. Save to & Read from local storage by using serialization(e.g. using JSON) /text file/ local database(e.g. SQLite)
 8. GUI by using Qt or Visual C++ with WinForm/WPF/etc. (but for a specific platform only)
 9. Option for sorting method, display format, etc.
