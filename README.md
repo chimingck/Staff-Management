@@ -14,6 +14,7 @@ It's an employee management system which facilitates the administrative work of 
 4. Modify current employees' info.
 5. Search/list employees by salary (heigher than/ lower than/ between a specified price point)
 6. Add self-define field/attributes
+
 (Undecided yet)
 7. Save to & Read from local storage by using serialization(e.g. using JSON) /text file/ local database(e.g. SQLite)
 8. GUI by using Qt or Visual C++ with WinForm/WPF/etc. (but for a specific platform only)
