@@ -23,7 +23,7 @@ It's an employee management system which facilitates the administrative work of 
 9. Option for sorting method, display format, etc.
 
 ## Assumption/Preset statement
-Max. no. of record? etc.
+
 
 ## Implementation
 Maybe using vector of struct to store the info of each employee (but how to add self-define attribute?)
