@@ -4,42 +4,42 @@
 
 using namespace std;
 
-void functionDisplay()
+void function_display()
 {
   
 }
 
-void createEmployee()
+void create_employee()
 {
 
 }
 
-void searchEnployee()
-{
-  
-}
-
-void fireEmployee()
+void search_employee()
 {
   
 }
 
-void modifyEmployee()
+void fire_employee()
 {
   
 }
 
-void searchBySalary()
+void modify_employee()
 {
   
 }
 
-void addSelfDefine()
+void search_by_salary()
 {
   
 }
 
-void deleteSelfDefine()
+void add_self_define()
+{
+  
+}
+
+void delete_self_define()
 {
   
 }
