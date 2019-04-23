@@ -14,7 +14,7 @@ struct record
 };
 
 
-void function_display(input_choice)
+void function_display(int input_choice)
 {
   
 }
