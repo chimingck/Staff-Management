@@ -66,6 +66,28 @@ int main()
     function_display(input_choice);
     cin >> input_choice;
     clear_screen();
+    if(input_choice == 1){
+
+    }
+    else if(input_choice == 2){
+
+    }
+    else if(input_choice == 3){
+
+    }
+    else if(input_choice == 4){
+
+    }
+    else if(input_choice == 5){
+
+    }
+    else if(input_choice == 6){
+
+    }
+    else{
+      cout << "Error, please enter number from the Function List." << endl;
+      function_display(input_choice);
+    }
   }
   
   return 0;
