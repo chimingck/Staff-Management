@@ -34,8 +34,8 @@ void create_employee(vector<Record> employees, string id, int age, string role, 
   Record new_employee;
   new_employee.id = id;
   new_employee.age = age;
-  new_emplyee.role = role;
-  new_emplyee.salary = salary;
+  new_employee.role = role;
+  new_employee.salary = salary;
   
   employees.push_back(new_employee);
 }
@@ -97,6 +97,7 @@ int main()
     }
     else{
       cout << "Error, please enter number from the Function List." << endl;
+      input_choice = 0;
       function_display(input_choice);
     }
   }
