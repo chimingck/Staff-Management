@@ -45,7 +45,11 @@ void delete_self_define()
 }
 
 int main()
-{
+{ 
+  while(1)
+  {
+    function_display();
+  }
   
   return 0;
 }
