@@ -19,6 +19,11 @@ void function_display(input_choice)
   
 }
 
+void clear_screen()
+{
+  cout << string( 100, '\n' );
+}
+
 void create_employee()
 {
 
@@ -60,7 +65,7 @@ int main()
   while(input_choice != -1){
     function_display(input_choice);
     cin >> input_choice;
-
+    clear_screen();
   }
   
   return 0;
