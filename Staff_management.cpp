@@ -95,6 +95,10 @@ int main()
     else if(input_choice == 6){
 
     }
+    else if(input_choice == 6){
+      cout << "SYSTEM TERMINATED" << endl;
+      break;
+    }
     else{
       cout << "Error, please enter number from the Function List." << endl;
       input_choice = 0;
