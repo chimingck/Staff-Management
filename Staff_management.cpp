@@ -24,9 +24,9 @@ void clear_screen()
   cout << string( 100, '\n' );
 }
 
-void create_employee(vector<Record> employees, string id, int age, string role, double salary)
+void create_employee(vector<Record> &employees, string id, int age, string role, double salary)
 {
-  if (int < 0)
+  if (age < 0)
     age = -1;
   if (salary < 0)
     salary = -1;
@@ -72,6 +72,7 @@ void delete_self_defined()
 
 int main()
 { 
+  /*
   int input_choice = 0;
   while(input_choice != -1){
     function_display(input_choice);
@@ -107,7 +108,7 @@ int main()
       function_display(input_choice);
     }
   }
-  
+  */
   return 0;
 }
   
