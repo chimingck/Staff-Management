@@ -95,8 +95,10 @@ int main()
     else if(input_choice == 6){
 
     }
-    else if(input_choice == 6){
-      cout << "SYSTEM TERMINATED" << endl;
+    else if(input_choice == -1){
+      cout << "***___SYSTEM TERMINATED___***" << endl;
+      cout << "    ***___THANK YOU___***    " << endl;
+      cout << "    ***___GOOD  BYE___***    " << endl;
       break;
     }
     else{
