@@ -3,19 +3,11 @@
 #include <string>
 #include <vector>
 #include <limits>
+#include "staff_management.h"
 
 using namespace std;
 
-struct Record
-{
-  string id;
-  string name;
-  int age;
-  string role;
-  double salary;
-  vector<string> self_defined;
-};
-
+struct Record;
 
 void function_display(int input_choice)
 {
@@ -206,7 +198,7 @@ vector<int> search_by_salary(vector<Record> &employees, double low, double high)
 
 // return 0 if the attriute/field is added and initialized successfully.
 // return -1 if there is an existing self-defined field/attribute with same name. 
-int add_self_defined(vector<Record> &employees, vector<string> &self_defined_fields, string field_name, string default_value = "")
+int add_self_defined(vector<Record> &employees, vector<string> &self_defined_fields, string field_name, string default_value /*= ""*/)
 {
   for (vector<string>::size_type i = 0; i != self_defined_fields.size(); ++i)
     if (self_defined_fields[i] == field_name)

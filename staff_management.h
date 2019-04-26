@@ -32,7 +32,7 @@ int modify_employee(std::vector<Record> &employees, const std::vector<std::strin
 
 std::vector<int> search_by_salary(std::vector<Record> &employees, double low, double high);
 
-int add_self_defined(std::vector<Record> &employees, std::vector<std::string> &self_defined_fields, std::string field_name, std::string default_value /*= ""*/);
+int add_self_defined(std::vector<Record> &employees, std::vector<std::string> &self_defined_fields, std::string field_name, std::string default_value = "");
 
 int delete_self_defined_by_name(std::vector<Record> &employees, std::vector<std::string> &self_defined_fields, std::string field_name);
 
