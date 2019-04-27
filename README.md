@@ -30,8 +30,15 @@ For creating new employee, the below is the input specification:
 
 Errors may occur when users create a new employee **not** according to the above specoification
 
+## Compilation & Execution instructions
 
+In the terminal:
+
+The program is using makfile and the compilation is done by make main.
+
+The Execution is done by ./main .
 
 
 ## Implementation
-Maybe using vector of struct to store the info of each employee (but how to add self-define attribute?)
+Using vector of struct to store the info of each employee. (including a vector of custom fields) 
+Using vector of string to store name of cuntom field.
