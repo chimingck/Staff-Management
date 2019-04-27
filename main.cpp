@@ -395,6 +395,7 @@ int main()
         }
         else{
           cout << endl << "Please choose from the above 3 ways : " << endl;
+          cin >> way;
         }
       }
       clear_screen();
