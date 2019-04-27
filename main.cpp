@@ -74,8 +74,8 @@ void function_display(const vector<string> &self_defined_fields, int input_choic
     cout << endl;
   }
   else if(input_choice == 2){
-    cout << "Searching Employee(s)" << endl << endl;
-    cout << "You may use the following field to search : " << endl;
+    cout << "Searching Employee(s)" << endl;
+    cout << "You may use the following field to search : " << endl << endl;
 
     cout << left << setw(4) << "No." 
          << left << setw(6) << "Field"
@@ -260,10 +260,15 @@ int main()
     else if(input_choice == 2){
       cout << endl << "Please Enter the Searching Field : ";
       cin >> field;
-      cout << endl << "Please Enter the Keyword : ";
+      cout << "Please Enter the Keyword : ";
       cin >> key;
-      cout << endl << endl << endl << endl;
+      clear_screen();
+
       cout << "Search Result : " << endl << endl;
+      // Header, optional
+      cout << left << setw(6) << "INDEX" << left << setw(13) << "ID"
+           << left << setw(21) << "NAME" << left << setw(4) << "AGE"
+           << left << setw(21) << "ROLE" << left << setw(11) << "SALARY";
       vector<int> ids = search_employee(employees, field, key);
       for (auto i : ids){
         display_employee(employees, self_defined_fields, i);
