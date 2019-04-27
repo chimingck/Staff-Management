@@ -223,7 +223,10 @@ int main()
     function_display(input_choice);
     cin >> input_choice;
     clear_screen();
-    if(input_choice == 1){
+    if(input_choice == 0){
+      cout << endl;
+    }
+    else if(input_choice == 1){
       display_all_employees(employees, self_defined_fields);
     }
     else if(input_choice == 2){
@@ -250,7 +253,7 @@ int main()
       cout << "    ***___GOOD  BYE___***    " << endl;
       break;
     }
-    else{
+    else if{
       cout << "Error, please enter number from the Function List." << endl << endl;
       input_choice = 0;
     }
