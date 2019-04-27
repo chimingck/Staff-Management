@@ -219,10 +219,12 @@ int main()
  
 
   int input_choice = 0;
+  function_display(self_defined_fields, input_choice);
   while(input_choice != -1){
-    function_display(self_defined_fields, input_choice);
     cin >> input_choice;
     clear_screen();
+    function_display(self_defined_fields, input_choice);
+
     if(input_choice == 0){
       cout << endl;
     }
@@ -230,7 +232,7 @@ int main()
       display_all_employees(employees, self_defined_fields);
     }
     else if(input_choice == 2){
-
+      
     }
     else if(input_choice == 3){
 
