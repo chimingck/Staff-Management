@@ -7,7 +7,7 @@
 
 using namespace std;
 
-void function_display(int input_choice)
+void function_display(const vector<string> &self_defined_fields, int input_choice)
 {
   if(input_choice == 0){
     cout << "WELCOME TO THE STAFF MANAGEMENT SYSTEM" << endl;
@@ -220,7 +220,7 @@ int main()
 
   int input_choice = 0;
   while(input_choice != -1){
-    function_display(input_choice);
+    function_display(self_defined_fields, input_choice);
     cin >> input_choice;
     clear_screen();
     if(input_choice == 0){
