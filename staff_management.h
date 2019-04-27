@@ -18,7 +18,7 @@ void function_display(const std::vector<std::string> &self_defined_fields, int i
 
 void clear_screen();
 
-void record_header();
+void record_header(const std::vector<std::string> &self_defined_fields);
 
 void display_employee(const std::vector<Record> &employees, const std::vector<std::string> &self_defined_fields, int index);
 
