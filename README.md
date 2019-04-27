@@ -19,12 +19,15 @@ This staff management aims to help a **small** company/business to collect and m
 
 ## Assumption/Preset statement
 There are 5 initial field of each employee - (ID, Name, Age, Role, Salary)
+
 For creating new employee, the below is the input specification:
+
 - ID: 10 digits string, Unique
 - Name: Maximum 20 digits string
 - Age: Maximum 3 digits Positive Integer
 - Role(Post of the Employee): Maximum 20 digits string
 - Salary: Maximum 10 digits double
+
 Errors may occur when users create a new employee **not** according to the above specoification
 
 
