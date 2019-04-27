@@ -66,7 +66,7 @@ void function_display(int input_choice)
          << left << setw(100) << "Shut Down the System."
          << endl;
 
-    cout << endl << "Please Enter a Function No. : " << endl;
+    cout << endl << "Please Enter a Function No. : ";
 
   }
   else if(input_choice == 1){
@@ -87,13 +87,8 @@ void function_display(int input_choice)
   else if(input_choice == 6){
 
   }
-  else if(input_choice == -1){
-    cout << "***___SYSTEM TERMINATED___***" << endl;
-    cout << "    ***___THANK YOU___***    " << endl;
-    cout << "    ***___GOOD  BYE___***    " << endl;
-  }
-  else{
-    cout << "Error, please enter number from the Function List." << endl;
+  else if(input_choice == 7){
+
   }
 }
 
@@ -243,6 +238,9 @@ int main()
 
     }
     else if(input_choice == 6){
+
+    }
+    else if(input_choice == 7){
 
     }
     else if(input_choice == -1){
