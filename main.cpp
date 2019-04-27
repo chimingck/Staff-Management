@@ -306,6 +306,9 @@ int main()
   int sure = false;
   int index;
 
+  // For choice 6
+  string update;
+
   function_display(self_defined_fields, input_choice);
 
   while(input_choice != -1){
@@ -352,7 +355,7 @@ int main()
     }
     // SEARCH
     else if(input_choice == 3){
-      cout << endl << "Please Enter the Searching Field : ";
+      cout << endl << "Please Enter the Searching Field No. : ";
       cin >> field;
       while(1){
         if (field == 1 || field == 2 || field == 3 || field == 4){
@@ -518,8 +521,7 @@ int main()
              << left << setw(20) << self_defined_fields[i]
              << endl;
       }
-
-      cout << endl << "Please Enter the Field to modify : ";
+      cout << endl << "Please Enter the Field No. to modify : ";
       cin >> field;
       while(1){
         if (field >= 1 && field <= self_defined_fields.size()+4){
@@ -528,13 +530,27 @@ int main()
         else{
           cout << endl << "Please choose from the above fields : ";
           cin >> field;
-          cout << endl;
         }
       }
 
-      cout << "Please Enter the Keyword : ";
-      cin >> key;
+      cout << "Please Enter the Update Value : ";
+      cin >> update;
       clear_screen();
+
+      while(1){
+        error_checker = modify_employee(employees, self_defined_fields, index, field, update);
+        if (error_checker == -2){       // -3 and -1 will not be returned as they are checked above
+          cout << "Invalid Update Value" << endl;
+          cout << "Please Enter the Update Value : ";
+          cin >> update;
+          cout << endl;
+        }
+        else if(error_checker == 0){
+          cout << "Employee Updated" << endl;
+          break;
+        }
+      }
+    cout << endl << "Type '0' to Return to Main Menu : ";
     }
     // Add Self-defined
     else if(input_choice == 7){
