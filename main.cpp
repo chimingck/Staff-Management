@@ -194,6 +194,8 @@ int main()
   // delete_self_defined_by_index(employees, self_defined_fields, 0);
   display_all_employees(employees, self_defined_fields);
 
+
+  cout << endl;
   function_display(0);
   /*
   int input_choice = 0;
