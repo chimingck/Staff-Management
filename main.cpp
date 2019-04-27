@@ -564,7 +564,7 @@ int main()
     // Add Self-defined
     else if(input_choice == 7){
       cout << endl << "Please Enter the Field to Add : ";
-      cin >> field;
+      cin >> field_name;
       while(1){
         error_checker = add_self_defined(employees, self_defined_fields, field_name, default_value);
         if(error_checker == -1){
