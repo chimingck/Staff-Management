@@ -240,7 +240,10 @@ int main()
  
 
   int input_choice = 0;
+
+
   function_display(self_defined_fields, input_choice);
+
   while(input_choice != -1){
     cin >> input_choice;
     clear_screen();
@@ -254,7 +257,8 @@ int main()
       cout << endl << "Type '0' to Return to Main Menu : ";
     }
     else if(input_choice == 2){
-      
+      int field = 0;
+      string key = 0;
     }
     else if(input_choice == 3){
 
