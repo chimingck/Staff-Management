@@ -516,8 +516,12 @@ int main()
            << left << setw(20) << "Role"
            << endl;
       
+      cout << left << setw(4) << "5." 
+           << left << setw(20) << "Salary"
+           << endl;
+
       for (vector<string>::size_type i = 0; i != self_defined_fields.size(); ++i){
-        cout << left << setw(4) << to_string(i+5)+"."
+        cout << left << setw(4) << to_string(i+6)+"."
              << left << setw(20) << self_defined_fields[i]
              << endl;
       }
