@@ -70,13 +70,28 @@ void function_display(const vector<string> &self_defined_fields, int input_choic
 
   }
   else if(input_choice == 1){
-    cout << endl << " Displaying All Employees" << endl;
+    cout << endl << "Displaying All Employees" << endl;
     cout << endl;
   }
   else if(input_choice == 2){
     cout << "Searching Employee(s)" << endl
          << endl
          << "You may use the following field to search : "
+         << endl
+         << left << setw(4) << "No." 
+         << left << setw(6) << "Field"
+         << endl
+         << left << setw(4) << "1." 
+         << left << setw(6) << "ID"
+         << endl
+         << left << setw(4) << "2." 
+         << left << setw(6) << "Name"
+         << endl
+         << left << setw(4) << "3." 
+         << left << setw(6) << "Age"
+         << endl
+         << left << setw(4) << "4." 
+         << left << setw(6) << "Role"
          << endl;
   }
   else if(input_choice == 3){
@@ -233,9 +248,22 @@ int main()
     }
     else if(input_choice == 1){
       display_all_employees(employees, self_defined_fields);
+      cout << endl << "Type '0' to Return to Main Menu : ";
     }
     else if(input_choice == 2){
-      
+      int field = 0;
+      string key = 0;
+      cout << endl << "Please Enter the Searching Field : ";
+      cin >> field;
+      cout << endl << "Please Enter the Keyword : ";
+      cin >> key;
+      cout << endl << endl << endl << endl;
+      cout << "Search Result : " << endl << endl;
+      vector<int> ids = search_employee(employees, field, key);
+      for (auto i : ids){
+        display_employee(employees, self_defined_fields, i);
+      }
+      cout << endl;
     }
     else if(input_choice == 3){
 
@@ -261,8 +289,6 @@ int main()
     else{
       cout << "Error, please enter number from the Function List." << endl << endl;
     }
-
-    cout << "Type '0' to Return to Main Menu : ";
   }
 
   return 0;
