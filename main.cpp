@@ -580,7 +580,6 @@ int main()
           cout << endl << "This field name already exist" << endl;
           cout << endl << "Please Enter the Field Name to Add : ";
           cin >> field_name;
-          cout << endl;
         }
         else if(error_checker == 0){
           cout << endl << "Field Added" << endl;
@@ -604,7 +603,6 @@ int main()
               cout << endl << "This field name does not exist" << endl;
               cout << endl << "Please Enter the Field Name to Delete : ";
               cin >> field_name;
-              cout << endl;
             }
             else if(error_checker == 0){
               cout << endl << "Field Deleted" << endl;
@@ -622,12 +620,12 @@ int main()
           }
           cout << endl << "Please Enter the Field No. to Delete : ";
           cin >> field;
+          field -= 6;
           while(1){
             error_checker = delete_self_defined_by_index(employees, self_defined_fields, field);
             if(error_checker == -1){
               cout << endl << "Please choose from the above fields : ";
               cin >> field;
-              cout << endl;
             }
             else if(error_checker == 0){
               cout << endl << "Field Deleted" << endl;
