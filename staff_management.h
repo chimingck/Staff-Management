@@ -14,10 +14,6 @@ struct Record
   std::vector<std::string> self_defined;
 };
 
-void function_display(const std::vector<std::string> &self_defined_fields, int input_choice);
-
-void clear_screen();
-
 void record_header(const std::vector<std::string> &self_defined_fields);
 
 void display_employee(const std::vector<Record> &employees, const std::vector<std::string> &self_defined_fields, int index);
