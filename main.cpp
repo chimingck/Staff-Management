@@ -400,7 +400,7 @@ int main()
       }
       clear_screen();
       cout << "Search Result : " << endl << endl;
-      vector<int> ids = search_employee(employees, field, key);
+      vector<int> ids = search_by_salary(employees, value1, value2);
       if (ids.empty()){
         cout << "No Matching Result" << endl;
       }
