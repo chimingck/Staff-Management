@@ -9,7 +9,35 @@ using namespace std;
 
 void function_display(int input_choice)
 {
-  
+  if(input_choice == 0){
+    cout << "WELCOME TO THE STAFF MANAGEMENT SYSTEM"
+  }
+  else if(input_choice == 1){
+
+  }
+  else if(input_choice == 2){
+
+  }
+  else if(input_choice == 3){
+
+  }
+  else if(input_choice == 4){
+
+  }
+  else if(input_choice == 5){
+
+  }
+  else if(input_choice == 6){
+
+  }
+  else if(input_choice == -1){
+    cout << "***___SYSTEM TERMINATED___***" << endl;
+    cout << "    ***___THANK YOU___***    " << endl;
+    cout << "    ***___GOOD  BYE___***    " << endl;
+  }
+  else{
+    cout << "Error, please enter number from the Function List." << endl;
+  }
 }
 
 void clear_screen()
