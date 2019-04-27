@@ -11,6 +11,39 @@ void function_display(int input_choice)
 {
   if(input_choice == 0){
     cout << "WELCOME TO THE STAFF MANAGEMENT SYSTEM" << endl;
+    cout << " You may use the following functions: " << endl;
+    // Header, optional
+    cout << left << setw(4) << "No."
+         << left << setw(20) << "Name"
+         << left << setw(100) << "Discription"
+         << endl;
+    
+    // Function 1
+    cout << left << setw(4) << "1."
+         << left << setw(20) << "Display All Employees"
+         << left << setw(100) << "To Display All Details (e.g. Name, Role...) Of All Employees"
+         << endl;
+
+    cout << left << setw(4) << "2."
+         << left << setw(20) << "Search An Employee"
+         << left << setw(100) << "Discription"
+         << endl;
+
+    cout << left << setw(4) << "No."
+         << left << setw(20) << "Name"
+         << left << setw(100) << "Discription"
+         << endl;
+    
+    cout << left << setw(4) << "No."
+         << left << setw(20) << "Name"
+         << left << setw(100) << "Discription"
+         << endl;
+    
+    cout << left << setw(4) << "No."
+         << left << setw(20) << "Name"
+         << left << setw(100) << "Discription"
+         << endl;
+
   }
   else if(input_choice == 1){
 
