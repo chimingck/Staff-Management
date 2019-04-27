@@ -590,7 +590,7 @@ int main()
     }
     // Delete self-defined
     else if(input_choice == 8){
-      if(self_defined_fields.size != 0){
+      if(self_defined_fields.size() != 0){
         cout << endl << "Please Enter the Method : ";
         cin >> way;
         while(1){
