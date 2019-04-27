@@ -143,7 +143,15 @@ void function_display(const vector<string> &self_defined_fields, int input_choic
     cout << endl;
   }
   else if(input_choice == 8){
+    cout << "Adding a Self-defined Field" << endl;
+    cout << endl;
+    cout << left << setw(4) << "1." 
+         << left << setw(16) << "Delete by Name"
+         << endl;
 
+    cout << left << setw(4) << "2." 
+         << left << setw(16) << "Delete by Index"
+         << endl;
   }
 }
 
@@ -313,6 +321,7 @@ int main()
   // For choice 7
   string field_name;
   string default_value;
+
 
   function_display(self_defined_fields, input_choice);
 
@@ -582,7 +591,61 @@ int main()
     }
     // Delete self-defined
     else if(input_choice == 8){
+      cout << endl << "Please Enter the Method : ";
+      cin >> way;
+      while(1){
+        if(way == 1){
+          cout << endl << "Delete by Name" << endl;
+          cout << endl << "Please Enter the Field Name to Delete : ";
+          cin >> field_name;
+          while(1){
+            error_checker = delete_self_defined_by_name(employees, self_defined_fields, field_name);
+            if(error_checker == -1){
+              cout << endl << "This field name does not exist" << endl;
+              cout << endl << "Please Enter the Field Name to Delete : ";
+              cin >> field_name;
+              cout << endl;
+            }
+            else if(error_checker == 0){
+              cout << endl << "Field Deleted" << endl;
+              break;
+            }
+          }
+          break;
+        }
+        else if(way == 2){
+          cout << endl << "Delete by Index" << endl << endl;
+          for (vector<string>::size_type i = 0; i != self_defined_fields.size(); ++i){
+            cout << left << setw(4) << to_string(i+6)+"."
+                 << left << setw(20) << self_defined_fields[i]
+                 << endl;
+          }
+          cout << endl << "Please Enter the Field No. to Delete : ";
+          cin >> field;
+          while(1){
+            error_checker = delete_self_defined_by_index(employees, self_defined_fields, field);
+            if(error_checker == -1){
+              cout << endl << "Please choose from the above fields : ";
+              cin >> field;
+              cout << endl;
+            }
+            else if(error_checker == 0){
+              cout << endl << "Field Deleted" << endl;
+              break;
+            }
+          }
+          break;
+        }
+        else{
+          cout << endl << "Please choose from the above 2 ways : ";
+          cin >> way;
+          cout << endl;
+        }
 
+      }
+
+
+      cout << endl << "Type '0' to Return to Main Menu : ";
     }
     else if(input_choice == -1){
       cout << "***___SYSTEM TERMINATED___***" << endl;
