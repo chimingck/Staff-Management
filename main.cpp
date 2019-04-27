@@ -7,6 +7,16 @@
 
 using namespace std;
 
+void function_display(int input_choice)
+{
+  
+}
+
+void clear_screen()
+{
+  cout << string( 100, '\n' );
+}
+
 int main()
 { 
   // Sample Test Case

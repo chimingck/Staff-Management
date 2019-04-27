@@ -9,16 +9,6 @@ using namespace std;
 
 struct Record;
 
-void function_display(int input_choice)
-{
-  
-}
-
-void clear_screen()
-{
-  cout << string( 100, '\n' );
-}
-
 void display_employee(const vector<Record> &employees, const vector<string> &self_defined_fields, int index)
 {
   cout << left << setw(5) << to_string(index)+"." << " "
