@@ -518,7 +518,23 @@ int main()
              << left << setw(20) << self_defined_fields[i]
              << endl;
       }
-      cout << endl;
+
+      cout << endl << "Please Enter the Field to modify : ";
+      cin >> field;
+      while(1){
+        if (field >= 1 && field <= self_defined_fields.size()+4){
+          break;
+        }
+        else{
+          cout << endl << "Please choose from the above fields : ";
+          cin >> field;
+          cout << endl;
+        }
+      }
+
+      cout << "Please Enter the Keyword : ";
+      cin >> key;
+      clear_screen();
     }
     // Add Self-defined
     else if(input_choice == 7){
