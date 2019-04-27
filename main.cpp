@@ -60,7 +60,13 @@ void function_display(int input_choice)
          << left << setw(100) << "To Delete a Self-defined Field from the Staff Records."
          << endl;
 
-    cout << endl << "Please Enter a Function No. : ";
+    //Function -1
+    cout << left << setw(4) << "-1."
+         << left << setw(30) << "Terminate the System"
+         << left << setw(100) << "Shut Down the System."
+         << endl;
+
+    cout << endl << "Please Enter a Function No. : " << endl;
 
   }
   else if(input_choice == 1){
@@ -214,8 +220,8 @@ int main()
 
 
   cout << endl;
-  function_display(0);
-  /*
+ 
+
   int input_choice = 0;
   while(input_choice != -1){
     function_display(input_choice);
@@ -251,6 +257,6 @@ int main()
       function_display(input_choice);
     }
   }
-  */
+
   return 0;
 }
