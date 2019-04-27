@@ -301,6 +301,9 @@ int main()
   double value1;
   double value2;
 
+  // For choice 5
+  int sure = false;
+
   function_display(self_defined_fields, input_choice);
 
   while(input_choice != -1){
@@ -441,6 +444,30 @@ int main()
           cout << endl;
         }
       }
+      cout << endl << "You are going to fire the following employee" << endl;
+      record_header(self_defined_fields);
+      for (auto i : ids){
+        display_employee(employees, self_defined_fields, i);
+      }
+      cout << endl << "Type '1' to fire : " << endl;
+      cout << endl << "Type '0' to Cencel : " << endl;
+      cin >> sure;
+      while(1){
+        if (!sure){
+        break;
+        }
+        else if (sure == 1){
+          fire_employee(employees, ids[0]);
+          cout << "Employee Fired" << endl;
+          break;
+        }
+        else{
+          cout << "Please enter '0' or '1' : ";
+          cin >> sure;
+          cout << endl;
+        }
+      }
+      cout << endl << "Type '0' to Return to Main Menu : ";
     }
     // Modify Employee 
     else if(input_choice == 6){
