@@ -297,8 +297,8 @@ int main()
 
   // For choice 4
   int way;
-  int value1;
-  int value2;
+  double value1;
+  double value2;
 
   function_display(self_defined_fields, input_choice);
 
@@ -396,6 +396,7 @@ int main()
         else{
           cout << endl << "Please choose from the above 3 ways : ";
           cin >> way;
+          cout << endl;
         }
       }
       clear_screen();
