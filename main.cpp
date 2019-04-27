@@ -293,7 +293,7 @@ int main()
       cin >> id;
       cout << left << setw(7) << "Name" << ": ";
       cin >> name;
-      cout << left << setw(7) << "ID" << ": ";
+      cout << left << setw(7) << "Age" << ": ";
       cin >> age;
       cout << left << setw(7) << "Role" << ": ";
       cin >> role;
