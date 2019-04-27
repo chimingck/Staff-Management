@@ -135,7 +135,8 @@ void function_display(const vector<string> &self_defined_fields, int input_choic
     cout << endl;
   }
   else if(input_choice == 6){
-
+    cout << "Modifying Employee's Information by ID" << endl;
+    cout << endl;
   }
   else if(input_choice == 7){
 
@@ -472,7 +473,52 @@ int main()
     }
     // Modify Employee 
     else if(input_choice == 6){
+      cout << endl << "Please Enter the Employee's ID to Modify : ";
+      cin >> id;
+      while(1){
+        vector<int> ids = search_employee(employees, 1, id);
+        index = ids[0];
+        if (!ids.empty()){
+          break;
+        }
+        else{
+          cout << endl << "No Such Employee" << endl;
+          cout << endl << "Please Enter the Employee's ID to Modify : ";
+          cin >> id;
+          cout << endl;
+        }
+      }
+      cout << endl << "You are going to modify the following employee" << endl << endl;
+      record_header(self_defined_fields);
+      display_employee(employees, self_defined_fields, index);
+      cout << endl;
+      cout << "You may modify the following fields" << endl << endl;
+      cout << left << setw(4) << "No." 
+           << left << setw(20) << "Field"
+           << endl;
 
+      cout << left << setw(4) << "1." 
+           << left << setw(20) << "ID"
+           << endl;
+
+      cout << left << setw(4) << "2." 
+           << left << setw(20) << "Name"
+           << endl;
+
+      cout << left << setw(4) << "3." 
+           << left << setw(20) << "Age"
+           << endl;
+
+      cout << left << setw(4) << "4." 
+           << left << setw(20) << "Role"
+           << endl;
+      
+      for (vector<string>::size_type i = 0; i != self_defined_fields.size(); ++i){
+        cout << setw(4) << i+5 << "." 
+             << left << setw(20) << self_defined_fields[i];
+             << endl;
+      }
+      cout << endl;
     }
     // Add Self-defined
     else if(input_choice == 7){
