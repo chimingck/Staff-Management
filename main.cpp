@@ -277,7 +277,7 @@ int main()
       for (auto i : ids){
         display_employee(employees, self_defined_fields, i);
       }
-      cout << endl;
+      cout << endl << "Type '0' to Return to Main Menu : ";
     }
     else if(input_choice == 3){
 
