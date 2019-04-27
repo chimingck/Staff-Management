@@ -250,7 +250,7 @@ int main()
       break;
     }
     else{
-      cout << "Error, please enter number from the Function List." << endl;
+      cout << "Error, please enter number from the Function List." << endl << endl;
       input_choice = 0;
     }
   }
