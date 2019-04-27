@@ -99,6 +99,9 @@ int create_employee(vector<Record> &employees, const vector<string> &self_define
   new_employee.role = role;
   new_employee.salary = salary;
   
+  for (vector<string>::size_type i = 0; i != self_defined_fields.size(); ++i)
+    new_employee.self_defined.push_back("");
+  
   employees.push_back(new_employee);
   return 0;
 }

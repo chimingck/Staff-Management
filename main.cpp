@@ -269,6 +269,8 @@ int main()
   int age;
   string role;
   double salary;
+  // Assume there is atmost 95 self-defined field
+  string temp[95];
 
   // For choice 2
   int field;
@@ -286,17 +288,18 @@ int main()
     }
     // CREATE
     else if(input_choice == 1){
-      cout << endl << "Please Enter the Employee's Information : " << endl;
-      cout << endl << "ID : ";
+      cout << endl << "Please Enter the Employee's Information : " << endl << endl;
+      cout << "ID : ";
       cin >> id;
-      cout << endl << "Name : ";
+      cout << "Name : ";
       cin >> name;
-      cout << endl << "Age : ";
+      cout << "Age : ";
       cin >> age;
-      cout << endl << "Role : ";
+      cout << "Role : ";
       cin >> role;
-      cout << endl << "Salary : ";
+      cout << "Salary : ";
       cin >> salary;
+
       clear_screen();
       error_checker = create_employee(employees, self_defined_fields, id, name, age, role, salary);
       if (error_checker == 0){
