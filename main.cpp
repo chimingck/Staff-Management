@@ -119,7 +119,7 @@ void clear_screen()
   cout << string( 100, '\n' );
 }
 
-void record_header()
+void record_header(const vector<string> &self_defined_fields)
 {
   cout << left << setw(6) << "INDEX" << left << setw(13) << "ID"
        << left << setw(21) << "NAME" << left << setw(4) << "AGE"
@@ -275,8 +275,7 @@ int main()
       clear_screen();
 
       cout << "Search Result : " << endl << endl;
-      record_header();
-
+      record_header(self_defined_fields);
       vector<int> ids = search_employee(employees, field, key);
       for (auto i : ids){
         display_employee(employees, self_defined_fields, i);
