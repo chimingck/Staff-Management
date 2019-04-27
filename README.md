@@ -5,24 +5,29 @@ HKU ENGG1340 Course Project
 It's an employee management system which facilitates the administrative work of a **samll** company/business.
 
 ## Aims & objective (optional)
-
+This staff management aims to help a **small** company/business to collect and manage the information of its employees.
 ## Features
-(must)
 
 1. Create new employee with employee's data(e.g. ID, Name, Age, Role/Job Position, Salary)
-2. Search for & delete employees' data by ID, Name or Role (or any other uniqle info./ key field)
-3. Fire an employee
-4. Modify current employees' info.
-5. Search/list employees by salary (heigher than/ lower than/ between a specified price point)
-6. Add self-define field/attributes
-
-(Undecided yet)
-
-7. Save to & Read from local storage by using serialization(e.g. using JSON) /text file/ local database(e.g. SQLite)
-8. GUI by using Qt or Visual C++ with WinForm/WPF/etc. (but for a specific platform only)
-9. Option for sorting method, display format, etc.
+2. Search for & delete employees' data by ID, Name, Age or Role
+3. Display all employees' data
+4. Fire an employee
+5. Modify current employees' info.
+6. Search/list employees by salary (heigher than/ lower than/ between a specified price point)
+7. Add self-define field/attributes
+8. Delete self-define field/attributes
 
 ## Assumption/Preset statement
+There are 5 initial field of each employee - (ID, Name, Age, Role, Salary)
+For creating new employee, the below is the input specification:
+ID: 10 digits string, Unique
+Name: Maximum 20 digits string
+Age: Maximum 3 digits Positive Integer
+Role(Post of the Employee): Maximum 20 digits string
+Salary: Maximum 10 digits double
+Errors may occur when users create a new employee **not** according to the above specoification
+
+
 
 
 ## Implementation
