@@ -71,7 +71,7 @@ void function_display(int input_choice)
   }
   else if(input_choice == 1){
     cout << endl << "All Employees Displayed" << endl;
-    cout << "Type '0' to Return to Main Menu : "
+    cout << "Type '0' to Return to Main Menu : ";
   }
   else if(input_choice == 2){
 
