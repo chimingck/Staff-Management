@@ -194,7 +194,7 @@ vector<int> search_by_salary(vector<Record> &employees, double low, double high)
 int add_self_defined(vector<Record> &employees, vector<string> &self_defined_fields, string field_name, string default_value /*= ""*/)
 {
   for (vector<string>::size_type i = 0; i != self_defined_fields.size(); ++i)
-    if (self_defined_fields[i] == field_name)
+    if (self_defined_fields[i] == field_name || field_name == "ID" || field_name == "NAME" || field_name == "AGE" || field_name == "ROLE" || field_name == "SALARY")
       return -1; // Same field/attribute already exist
   
   self_defined_fields.push_back(field_name);
