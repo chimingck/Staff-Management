@@ -303,6 +303,7 @@ int main()
 
   // For choice 5
   int sure = false;
+  int index;
 
   function_display(self_defined_fields, input_choice);
 
@@ -434,6 +435,7 @@ int main()
       cin >> id;
       while(1){
         vector<int> ids = search_employee(employees, 1, id);
+        index = ids[0];
         if (!ids.empty()){
           break;
         }
@@ -446,7 +448,7 @@ int main()
       }
       cout << endl << "You are going to fire the following employee" << endl << endl;
       record_header(self_defined_fields);
-      display_employee(employees, self_defined_fields, ids[0]);
+      display_employee(employees, self_defined_fields, index);
       cout << endl << "Type '1' to fire : " << endl;
       cout << endl << "Type '0' to Cencel : " << endl;
       cin >> sure;
