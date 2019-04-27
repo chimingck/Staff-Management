@@ -70,7 +70,7 @@ void function_display(int input_choice)
 
   }
   else if(input_choice == 1){
-    cout << "Displaying All Employees" << endl
+    cout << "Displaying All Employees" << endl;
   }
   else if(input_choice == 2){
 
