@@ -570,7 +570,8 @@ int main()
         if(error_checker == -1){
           cout << endl << "This field name already exist" << endl;
           cout << endl << "Please Enter the Field Name to Add : ";
-          cin >> field;
+          cin >> field_name;
+          cout << endl;
         }
         else if(error_checker == 0){
           cout << "Field Added" << endl;
