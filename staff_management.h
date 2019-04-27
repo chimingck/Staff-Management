@@ -14,7 +14,7 @@ struct Record
   std::vector<std::string> self_defined;
 };
 
-void function_display(int input_choice);
+void function_display(const std::vector<std::string> &self_defined_fields, int input_choice);
 
 void clear_screen();
 
