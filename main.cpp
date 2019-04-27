@@ -146,13 +146,13 @@ int main()
   vector<Record> employees;
   vector<string> self_defined_fields;
 
-  create_employee(employees, "3035574141", "Alvin", 18, "student", 100);
-  create_employee(employees, "3035574142", "Wilson", 19, "student", 200);
-  create_employee(employees, "3035574143", "Hello", 18, "sales", 7053.43);
-  create_employee(employees, "3035574144", "Ken", 18, "sales", 8530.5);
-  create_employee(employees, "3035574145", "William", 20, "accountant", 14000.85);
-  create_employee(employees, "0000000000", "Ken", 26, "ceo", 50000);
-  create_employee(employees, "9999999999", "Lucy", 43, "accountant", 23000.64);
+  create_employee(employees, self_defined_fields, "3035574141", "Alvin", 18, "student", 100);
+  create_employee(employees, self_defined_fields, "3035574142", "Wilson", 19, "student", 200);
+  create_employee(employees, self_defined_fields, "3035574143", "Hello", 18, "sales", 7053.43);
+  create_employee(employees, self_defined_fields, "3035574144", "Ken", 18, "sales", 8530.5);
+  create_employee(employees, self_defined_fields, "3035574145", "William", 20, "accountant", 14000.85);
+  create_employee(employees, self_defined_fields, "0000000000", "Ken", 26, "ceo", 50000);
+  create_employee(employees, self_defined_fields, "9999999999", "Lucy", 43, "accountant", 23000.64);
 
   display_all_employees(employees, self_defined_fields);
 
@@ -298,7 +298,7 @@ int main()
       cout << endl << "Salary : ";
       cin >> salary;
       clear_screen();
-      error_checker = create_employee(employees, id, name, age, role, salary);
+      error_checker = create_employee(employees, self_defined_fields, id, name, age, role, salary);
       if (error_checker == 0){
         cout << "Employee Created" << endl;
       }
