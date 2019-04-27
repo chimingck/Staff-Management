@@ -109,7 +109,26 @@ void function_display(const vector<string> &self_defined_fields, int input_choic
   }
   else if(input_choice == 4){
     cout << "Searching Employee(s) by Salary" << endl;
+    cout << "There are three ways to search by salary : " << endl;
+    cout << left << setw(4) << "No." 
+         << left << setw(13) << "Ways"
+         << left << setw(100) << "Discription"
+         << endl;
 
+    cout << left << setw(4) << "1." 
+         << left << setw(13) << "Greater than"
+         << left << setw(100) << "Search employee(s) that have salary greater than a value"
+         << endl;
+
+    cout << left << setw(4) << "2." 
+         << left << setw(13) << "Below"
+         << left << setw(100) << "Search employee(s) that have salary below a value"
+         << endl;
+    
+    cout << left << setw(4) << "3." 
+         << left << setw(13) << "Between"
+         << left << setw(100) << "Search employee(s) that have salary between two values"
+         << endl;
   }
   else if(input_choice == 5){
 
@@ -272,9 +291,14 @@ int main()
   // Assume there is atmost 95 self-defined field
   string temp[95];
 
-  // For choice 2
+  // For choice 3
   int field;
   string key;
+
+  // For choice 4
+  int way;
+  int value1;
+  int value2;
 
   function_display(self_defined_fields, input_choice);
 
@@ -343,17 +367,63 @@ int main()
     }
     // SEARCH BY SALARY
     else if(input_choice == 4){
-
+      cout << endl << "Please Enter the Searching Way : ";
+      cin >> way;
+      while(1){
+        // Greater than
+        if (way == 1){
+          cout << "To search employee(s) that have salary GREATER than : ";
+          cin >> value1;
+          value2 = numeric_limits<double>::max();
+          break;
+        }
+        // Below
+        else if (way == 2){
+          cout << "To search employee(s) that have salary BELOW : ";
+          cin >> value1;
+          value2 = 0;
+          break;
+        }
+        // Between
+        else if(way == 3){
+          cout << "To search employee(s) that have salary Between : " << endl;
+          cout << "Value1 : ";
+          cin >> value1;
+          cout << "Value2 : ";
+          cin >> value2;
+          break;
+        }
+        else{
+          cout << endl << "Please choose from the above 3 ways : " << endl;
+        }
+      }
+      clear_screen();
+      cout << "Search Result : " << endl << endl;
+      vector<int> ids = search_employee(employees, field, key);
+      if (ids.empty()){
+        cout << "No Matching Result" << endl;
+      }
+      else{
+        record_header(self_defined_fields);
+        for (auto i : ids){
+          display_employee(employees, self_defined_fields, i);
+        }
+      }
+      cout << endl << "Type '0' to Return to Main Menu : ";
     }
+    // Fire Employee
     else if(input_choice == 5){
 
     }
+    // Modify Employee 
     else if(input_choice == 6){
 
     }
+    // Add Self-defined
     else if(input_choice == 7){
 
     }
+    // Delete self-defined
     else if(input_choice == 8){
 
     }
