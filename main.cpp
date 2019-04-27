@@ -430,13 +430,13 @@ int main()
       cout << endl << "Please Enter the Employee's ID to Fire : ";
       cin >> id;
       while(1){
-        vector<int> ids = search_employee(employees, field, key);
+        vector<int> ids = search_employee(employees, 1, id);
         if (!ids.empty()){
           break;
         }
         else{
-          cout << "No Such Employee" << endl;
-          cout << "Please Enter the Employee's ID to Fire : ";
+          cout << endl << "No Such Employee" << endl;
+          cout << endl << "Please Enter the Employee's ID to Fire : ";
           cin >> id;
           cout << endl;
         }
