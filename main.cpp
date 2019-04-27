@@ -11,7 +11,7 @@ void function_display(int input_choice)
 {
   if(input_choice == 0){
     cout << "WELCOME TO THE STAFF MANAGEMENT SYSTEM" << endl;
-    cout << " You may use the following functions: " << endl;
+    cout << "You may use the following functions:  " << endl << endl;
     // Header, optional
     cout << left << setw(4) << "No."
          << left << setw(30) << "Name"
@@ -21,27 +21,43 @@ void function_display(int input_choice)
     // Function 1
     cout << left << setw(4) << "1."
          << left << setw(30) << "Display All Employees"
-         << left << setw(100) << "To Display All Details (e.g. Name, Role...) Of All Employees"
+         << left << setw(100) << "To Display All Details (e.g. Name, Role...) of All Employees."
          << endl;
 
+    // Function 2
     cout << left << setw(4) << "2."
-         << left << setw(30) << "Search An Employee"
-         << left << setw(100) << "Discription"
+         << left << setw(30) << "Search Employee(s)"
+         << left << setw(100) << "To Get a List of Employee(s) by a Field (e.g. ID, Name, Age, Role...)."
          << endl;
 
-    cout << left << setw(4) << "No."
-         << left << setw(30) << "Name"
-         << left << setw(100) << "Discription"
+    //Function 3
+    cout << left << setw(4) << "3."
+         << left << setw(30) << "Search Employee(s) by Salary"
+         << left << setw(100) << "To Get a List of Employee(s) by Salary (More than, Below, Between)."
+         << endl;
+
+    // Function 4
+    cout << left << setw(4) << "4."
+         << left << setw(30) << "Fire Employee"
+         << left << setw(100) << "To Fire an Employee by the Staff ID."
          << endl;
     
-    cout << left << setw(4) << "No."
-         << left << setw(30) << "Name"
-         << left << setw(100) << "Discription"
+    //Function 5
+    cout << left << setw(4) << "5."
+         << left << setw(30) << "Modify Employee Info."
+         << left << setw(100) << "To Modify an Employee's Information by the Staff ID."
          << endl;
     
-    cout << left << setw(4) << "No."
-         << left << setw(30) << "Name"
-         << left << setw(100) << "Discription"
+    //Function 6
+    cout << left << setw(4) << "6."
+         << left << setw(30) << "Add Self-defined Field"
+         << left << setw(100) << "To Add a Self-defined Field to the Staff Records."
+         << endl;
+    
+    //Function 7
+    cout << left << setw(4) << "7."
+         << left << setw(30) << "Delete Self-defined Field"
+         << left << setw(100) << "To Delete a Self-defined Field from the Staff Records."
          << endl;
 
   }
