@@ -74,7 +74,7 @@ void function_display(const vector<string> &self_defined_fields, int input_choic
     cout << "Type '0' to Return to Main Menu : ";
   }
   else if(input_choice == 2){
-
+    cout << "Search 
   }
   else if(input_choice == 3){
 
@@ -215,14 +215,11 @@ int main()
   display_all_employees(employees, self_defined_fields);
 
 
-  clear_screen();
+  cout << endl << endl << endl << endl << endl;
  
 
   int input_choice = 0;
   while(input_choice != -1){
-    function_display(self_defined_fields, input_choice);
-    cin >> input_choice;
-    clear_screen();
     if(input_choice == 0){
       cout << endl;
     }
@@ -257,6 +254,10 @@ int main()
       cout << "Error, please enter number from the Function List." << endl << endl;
       input_choice = 0;
     }
+    
+    function_display(self_defined_fields, input_choice);
+    cin >> input_choice;
+    clear_screen();
   }
 
   return 0;
