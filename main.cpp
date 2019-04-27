@@ -252,7 +252,6 @@ int main()
     else{
       cout << "Error, please enter number from the Function List." << endl;
       input_choice = 0;
-      function_display(input_choice);
     }
   }
 
