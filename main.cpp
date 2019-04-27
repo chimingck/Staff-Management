@@ -21,7 +21,7 @@ void function_display(const vector<string> &self_defined_fields, int input_choic
     // Function 1
     cout << left << setw(4) << "1."
          << left << setw(30) << "Create Employee"
-         << left << setw(100) << "To Add an Employees."
+         << left << setw(100) << "To Add an Employee."
          << endl;
 
     // Function 2
@@ -284,6 +284,7 @@ int main()
     if(input_choice == 0){
       cout << "";
     }
+    // CREATE
     else if(input_choice == 1){
       cout << endl << "Please Enter the Employee's Information : ";
       cout << endl << "ID : ";
@@ -309,11 +310,14 @@ int main()
         cout << "The Age/Salary is less than 0, or ID/Name/Role is empty." << endl;
         cout << "Employee NOT Created" << endl;
       }
+      cout << endl << "Type '0' to Return to Main Menu : ";
     }
+    // DISPLAY ALL
     else if(input_choice == 2){
       display_all_employees(employees, self_defined_fields);
       cout << endl << "Type '0' to Return to Main Menu : ";
     }
+    // SEARCH
     else if(input_choice == 3){
       cout << endl << "Please Enter the Searching Field : ";
       cin >> field;
@@ -329,6 +333,7 @@ int main()
       }
       cout << endl << "Type '0' to Return to Main Menu : ";
     }
+    // SEARCH BY SALARY
     else if(input_choice == 4){
 
     }
