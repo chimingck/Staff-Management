@@ -240,8 +240,8 @@ int main()
  
 
   int input_choice = 0;
-  int field = 0;
-  string key = 0;
+  int field;
+  string key;
 
   function_display(self_defined_fields, input_choice);
 
