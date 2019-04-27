@@ -240,7 +240,8 @@ int main()
  
 
   int input_choice = 0;
-
+  int field = 0;
+  string key = 0;
 
   function_display(self_defined_fields, input_choice);
 
@@ -257,8 +258,17 @@ int main()
       cout << endl << "Type '0' to Return to Main Menu : ";
     }
     else if(input_choice == 2){
-      int field = 0;
-      string key = 0;
+      cout << endl << "Please Enter the Searching Field : ";
+      cin >> field;
+      cout << endl << "Please Enter the Keyword : ";
+      cin >> key;
+      cout << endl << endl << endl << endl;
+      cout << "Search Result : " << endl << endl;
+      vector<int> ids = search_employee(employees, field, key);
+      for (auto i : ids){
+        display_employee(employees, self_defined_fields, i);
+      }
+      cout << endl;
     }
     else if(input_choice == 3){
 
