@@ -131,7 +131,8 @@ void function_display(const vector<string> &self_defined_fields, int input_choic
          << endl;
   }
   else if(input_choice == 5){
-
+    cout << "Firing Employee by ID" << endl;
+    cout << endl;
   }
   else if(input_choice == 6){
 
@@ -426,7 +427,20 @@ int main()
     }
     // Fire Employee
     else if(input_choice == 5){
-
+      cout << endl << "Please Enter the Employee's ID to Fire : ";
+      cin >> id;
+      while(1){
+        vector<int> ids = search_employee(employees, field, key);
+        if (!ids.empty()){
+          break;
+        }
+        else{
+          cout << "No Such Employee" << endl;
+          cout << "Please Enter the Employee's ID to Fire : ";
+          cin >> id;
+          cout << endl;
+        }
+      }
     }
     // Modify Employee 
     else if(input_choice == 6){
