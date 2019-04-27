@@ -574,10 +574,11 @@ int main()
           cout << endl;
         }
         else if(error_checker == 0){
-          cout << "Field Added" << endl;
+          cout << endl << "Field Added" << endl;
           break;
         }
       }
+      cout << endl << "Type '0' to Return to Main Menu : ";
     }
     // Delete self-defined
     else if(input_choice == 8){
