@@ -119,6 +119,16 @@ void clear_screen()
   cout << string( 100, '\n' );
 }
 
+void record_header()
+{
+  cout << left << setw(6) << "INDEX" << left << setw(13) << "ID"
+       << left << setw(21) << "NAME" << left << setw(4) << "AGE"
+       << left << setw(21) << "ROLE" << left << setw(11) << "SALARY";
+  for (auto s : self_defined_fields)
+    cout << left << setw(s.size()+6) << s;
+  cout << endl;
+}
+
 int main()
 { 
   // Sample Test Case
@@ -265,13 +275,7 @@ int main()
       clear_screen();
 
       cout << "Search Result : " << endl << endl;
-      // Header, optional
-      cout << left << setw(6) << "INDEX" << left << setw(13) << "ID"
-           << left << setw(21) << "NAME" << left << setw(4) << "AGE"
-           << left << setw(21) << "ROLE" << left << setw(11) << "SALARY";
-      for (auto s : self_defined_fields)
-        cout << left << setw(s.size()+6) << s;
-      cout << endl;
+      record_header();
 
       vector<int> ids = search_employee(employees, field, key);
       for (auto i : ids){
