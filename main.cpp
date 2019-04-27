@@ -446,7 +446,7 @@ int main()
       }
       cout << endl << "You are going to fire the following employee" << endl << endl;
       record_header(self_defined_fields);
-      cout << ids << endl;
+      cout << ids[0] << endl;
       for (auto i : ids){
         display_employee(employees, self_defined_fields, i);
       }
