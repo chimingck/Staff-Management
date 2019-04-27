@@ -348,6 +348,17 @@ int main()
     else if(input_choice == 3){
       cout << endl << "Please Enter the Searching Field : ";
       cin >> field;
+      while(1){
+        if (field == 1 || field == 2 || field == 3 || field == 4){
+          break;
+        }
+        else{
+          cout << endl << "Please choose from the above 4 fields : ";
+          cin >> field;
+          cout << endl;
+        }
+      }
+
       cout << "Please Enter the Keyword : ";
       cin >> key;
       clear_screen();
