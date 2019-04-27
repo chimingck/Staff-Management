@@ -372,21 +372,21 @@ int main()
       while(1){
         // Greater than
         if (way == 1){
-          cout << "To search employee(s) that have salary GREATER than : ";
+          cout << endl << "To search employee(s) that have salary GREATER than : ";
           cin >> value1;
           value2 = numeric_limits<double>::max();
           break;
         }
         // Below
         else if (way == 2){
-          cout << "To search employee(s) that have salary BELOW : ";
+          cout << endl << "To search employee(s) that have salary BELOW : ";
           cin >> value1;
           value2 = 0;
           break;
         }
         // Between
         else if(way == 3){
-          cout << "To search employee(s) that have salary Between : " << endl;
+          cout << endl << "To search employee(s) that have salary Between : " << endl;
           cout << "Value1 : ";
           cin >> value1;
           cout << "Value2 : ";
