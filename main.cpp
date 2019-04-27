@@ -70,7 +70,7 @@ void function_display(int input_choice)
 
   }
   else if(input_choice == 1){
-
+    cout << "Displaying All Employees" << endl
   }
   else if(input_choice == 2){
 
@@ -214,7 +214,7 @@ int main()
   display_all_employees(employees, self_defined_fields);
 
 
-  cout << endl;
+  clear_screen();
  
 
   int input_choice = 0;
@@ -223,7 +223,7 @@ int main()
     cin >> input_choice;
     clear_screen();
     if(input_choice == 1){
-
+      display_all_employees(employees, self_defined_fields);
     }
     else if(input_choice == 2){
 
