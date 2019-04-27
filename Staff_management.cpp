@@ -9,6 +9,10 @@ using namespace std;
 
 struct Record;
 
+// function: To display all the data of a employee
+// input: employees: the vector<Record> which stores all the data of employees
+//        self_defined_fields: the vector<string> which stores the name of self defined fileds
+//        index: the index of the employee to be displayed
 void display_employee(const vector<Record> &employees, const vector<string> &self_defined_fields, int index)
 {
   cout << left << setw(5) << to_string(index)+"." << " "
@@ -23,6 +27,9 @@ void display_employee(const vector<Record> &employees, const vector<string> &sel
   cout << endl;
 }
 
+// function: To display all the data of all employees
+// input: employees: the vector<Record> which stores all the data of employees
+//        self_defined_fields: the vector<string> which stores the name of self defined fileds
 void display_all_employees(const vector<Record> &employees, const vector<string> &self_defined_fields)
 {
   // Header, optional
@@ -38,14 +45,17 @@ void display_all_employees(const vector<Record> &employees, const vector<string>
     display_employee(employees, self_defined_fields, i);
 }
 
-// field
-// 1.Id
-// 2.Name
-// 3.Age
-// 4.Role
-// key must be converted string
-// To make it simple, do not support search by self-defined-attribute(s) for now.
-// return a vector<int> which store the index(es) of all employees who matches the key.
+// function: To search employee(s) who matches the key of a specific filed
+// input: employees: the vector<Record> which stores all the data of employees
+//        self_defined_fields: the vector<string> which stores the name of self defined fileds
+//        index: the index of the employee to be displayed
+//        field: 
+//              1.Id
+//              2.Name
+//              3.Age
+//              4.Role
+//        (key must be converted string)
+// return:  a vector<int> which store the index(es) of all employees who matches the key.
 vector<int> search_employee(const vector<Record> &employees, int field, string key)
 {
   vector<int> results;
@@ -82,9 +92,18 @@ vector<int> search_employee(const vector<Record> &employees, int field, string k
   return results;
 }
 
-// return 0 if employee is created successfully.
-// return -1 if there is an existing employee with same id.
-// return -2 if the age/salary is less than 0, or id/name/role is empty. Employee not created.
+// function: To create a new employee with specified info.
+// input: employees: the vector<Record> which stores all the data of employees
+//        self_defined_fields: the vector<string> which stores the name of self defined fileds
+//        id: id of the new employee
+//        name: name of the new employee
+//        age: age of the new employee
+//        role: role of the new employee
+//        salary: salary of the new employee
+//        (key must be converted string)
+// return: 0 if employee is created successfully.
+//         -1 if there is an existing employee with same id.
+//         -2 if the age/salary is less than 0, or id/name/role is empty. Employee not created.
 int create_employee(vector<Record> &employees, const vector<string> &self_defined_fields, string id,string name, int age, string role, double salary)
 {
   if (age < 0 || salary < 0 || id.empty() || name.empty() || role.empty())
@@ -106,6 +125,17 @@ int create_employee(vector<Record> &employees, const vector<string> &self_define
   return 0;
 }
 
+// function: To search employee(s) who matches the key of a specific filed
+// input: employees: the vector<Record> which stores all the data of employees
+//        self_defined_fields: the vector<string> which stores the name of self defined fileds
+//        index: the index of the employee to be displayed
+//        field: 
+//              1.Id
+//              2.Name
+//              3.Age
+//              4.Role
+//        (key must be converted string)
+// return:  a vector<int> which store the index(es) of all employees who matches the key.
 // return 0 if employee's is removed successfully.
 // return -1 if the index is out of range
 int fire_employee(vector<Record> &employees, int index)
@@ -118,18 +148,22 @@ int fire_employee(vector<Record> &employees, int index)
   return -1; // Index out of range
 }
 
-//  field
-// 1:Id
-// 2:Name
-// 3:Age
-// 4:Role
-// 5:Salary
-// 6+:Self_defined_field
-// key must be converted string
-// return 0 if employee's data is modified successfully.
-// return -1 if there is no existing employee with specified id.
-// return -2 if the new_value is empty or cannot be converted to int/double properly. i.e. invalid input.
-// return -3 if the field is invalid.
+// function: To modify employee's info with specific filed
+// input: employees: the vector<Record> which stores all the data of employees
+//        self_defined_fields: the vector<string> which stores the name of self defined fileds
+//        index: the index of the employee to be modified
+//        field: 
+//              1.Id
+//              2.Name
+//              3.Age
+//              4.Role
+//              5:Salary
+//              6+:Self_defined_field
+//        (key must be converted string)
+// return: 0 if employee's data is modified successfully.
+//         -1 if there is no existing employee with specified id.
+//         -2 if the new_value is empty or cannot be converted to int/double properly. i.e. invalid input.
+//         -3 if the field is invalid.
 int modify_employee(vector<Record> &employees, const vector<string> &self_defined_fields, int index, int field, string new_value)
 {
   if (index < 0 || index >= employees.size())
@@ -169,10 +203,15 @@ int modify_employee(vector<Record> &employees, const vector<string> &self_define
   return 0;
 }
 
+// function: To search for employee(s) with specified range of salary
+// input: employees: the vector<Record> which stores all the data of employees
+//        self_defined_fields: the vector<string> which stores the name of self defined fileds
+//        low: the lower boundary of salary
+//        high: the higher boundary of salary
 // use low = 0, high = X to find employees with salary lower than $X
 // use low = X, high = std::numeric_limits<double>::max() to find employees with salary higher than $X
 // use low = X, high = Y to find employees with salary between $X and $Y
-// return a vector<int> which store the index(es) of target employee(s)
+// return: a vector<int> which store the index(es) of target employee(s)
 vector<int> search_by_salary(vector<Record> &employees, double low, double high)
 {
   if (low > high) // swap low and high
@@ -189,8 +228,13 @@ vector<int> search_by_salary(vector<Record> &employees, double low, double high)
   return results;
 }
 
-// return 0 if the attriute/field is added and initialized successfully.
-// return -1 if there is an existing self-defined field/attribute with same name. 
+// function: To add a new self-defined field for all employee(s) with specified name
+// input: employees: the vector<Record> which stores all the data of employees
+//        self_defined_fields: the vector<string> which stores the name of self defined fileds
+//        field_name: the name of the new custom field
+//        default_value: default value of the new field for all employee(s)
+// return: 0 if the attriute/field is added and initialized successfully.
+//         -1 if there is an existing self-defined field/attribute with same name. 
 int add_self_defined(vector<Record> &employees, vector<string> &self_defined_fields, string field_name, string default_value /*= ""*/)
 {
   for (vector<string>::size_type i = 0; i != self_defined_fields.size(); ++i)
@@ -205,8 +249,12 @@ int add_self_defined(vector<Record> &employees, vector<string> &self_defined_fie
 
 // ***Provided 2 similar functions here.***
 
-// return 0 if the attriute/field is deleted successfully.
-// return -1 if there is no existing self-defined field/attribute with specified name. 
+// function: To delete a new self-defined field for all employee(s) with specified name
+// input: employees: the vector<Record> which stores all the data of employees
+//        self_defined_fields: the vector<string> which stores the name of self defined fileds
+//        field_name: the name of the field to be deleted
+// return: 0 if the attriute/field is deleted successfully.
+//         -1 if there is no existing self-defined field/attribute with specified name. 
 int delete_self_defined_by_name(vector<Record> &employees, vector<string> &self_defined_fields, string field_name)
 {
   vector<string>::size_type i = 0;
@@ -229,8 +277,12 @@ int delete_self_defined_by_name(vector<Record> &employees, vector<string> &self_
     return -1; // field not found.
 }
 
-// return 0 if the attriute/field is deleted successfully.
-// return -1 if there is no existing self-defined field/attribute with specified index. i.e. index out of range .
+// function: To delete a new self-defined field for all employee(s) with specified name
+// input: employees: the vector<Record> which stores all the data of employees
+//        self_defined_fields: the vector<string> which stores the name of self defined fileds
+//        index: the index of the field to be deleted (starting form 0)
+// return: 0 if the attriute/field is deleted successfully.
+//         -1 if there is no existing self-defined field/attribute with specified index. i.e. index out of range .
 int delete_self_defined_by_index(vector<Record> &employees, vector<string> &self_defined_fields, int index)
 {
   if (index >= 0 && index < self_defined_fields.size())
