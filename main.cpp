@@ -449,9 +449,10 @@ int main()
       cout << endl << "You are going to fire the following employee" << endl << endl;
       record_header(self_defined_fields);
       display_employee(employees, self_defined_fields, index);
-      cout << endl << "Type '1' to fire : " << endl;
-      cout << endl << "Type '0' to Cencel : " << endl;
+      cout << endl << "Type '1' to fire : ";
+      cout << endl << "Type '0' to Cencel : ";
       cin >> sure;
+      cout << endl;
       while(1){
         if (!sure){
         break;
