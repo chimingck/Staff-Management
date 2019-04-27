@@ -10,7 +10,7 @@ using namespace std;
 void function_display(int input_choice)
 {
   if(input_choice == 0){
-    cout << "WELCOME TO THE STAFF MANAGEMENT SYSTEM"
+    cout << "WELCOME TO THE STAFF MANAGEMENT SYSTEM" << endl;
   }
   else if(input_choice == 1){
 
