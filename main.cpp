@@ -286,7 +286,7 @@ int main()
     }
     // CREATE
     else if(input_choice == 1){
-      cout << endl << "Please Enter the Employee's Information : ";
+      cout << endl << "Please Enter the Employee's Information : " << endl;
       cout << endl << "ID : ";
       cin >> id;
       cout << endl << "Name : ";
@@ -326,10 +326,15 @@ int main()
       clear_screen();
 
       cout << "Search Result : " << endl << endl;
-      record_header(self_defined_fields);
       vector<int> ids = search_employee(employees, field, key);
-      for (auto i : ids){
-        display_employee(employees, self_defined_fields, i);
+      if (ids.empty()){
+        cout << "No Matching Result" << endl;
+      }
+      else{
+        record_header(self_defined_fields);
+        for (auto i : ids){
+          display_employee(employees, self_defined_fields, i);
+        }
       }
       cout << endl << "Type '0' to Return to Main Menu : ";
     }
