@@ -11,7 +11,7 @@ void function_display(const vector<string> &self_defined_fields, int input_choic
 {
   if(input_choice == 0){
     cout << "WELCOME TO THE STAFF MANAGEMENT SYSTEM" << endl;
-    cout << "You may use the following functions:  " << endl << endl;
+    cout << "You may use the following functions : " << endl << endl;
     // Header, optional
     cout << left << setw(4) << "No."
          << left << setw(30) << "Name"
@@ -70,11 +70,14 @@ void function_display(const vector<string> &self_defined_fields, int input_choic
 
   }
   else if(input_choice == 1){
-    cout << endl << "All Employees Displayed" << endl;
-    cout << "Type '0' to Return to Main Menu : ";
+    cout << endl << " Displaying All Employees" << endl;
+    cout << endl;
   }
   else if(input_choice == 2){
-    cout << "Searching Employee(s)" << endl; 
+    cout << "Searching Employee(s)" << endl
+         << endl
+         << "You may use the following field to search : "
+         << endl;
   }
   else if(input_choice == 3){
 
@@ -257,8 +260,9 @@ int main()
     }
     else{
       cout << "Error, please enter number from the Function List." << endl << endl;
-      input_choice = 0;
     }
+
+    cout << "Type '0' to Return to Main Menu : ";
   }
 
   return 0;
