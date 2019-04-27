@@ -139,7 +139,8 @@ void function_display(const vector<string> &self_defined_fields, int input_choic
     cout << endl;
   }
   else if(input_choice == 7){
-
+    cout << "Adding a Self-defined Field" << endl;
+    cout << endl;
   }
   else if(input_choice == 8){
 
@@ -308,6 +309,10 @@ int main()
 
   // For choice 6
   string update;
+
+  // For choice 7
+  string field_name;
+  string default_value;
 
   function_display(self_defined_fields, input_choice);
 
@@ -558,7 +563,20 @@ int main()
     }
     // Add Self-defined
     else if(input_choice == 7){
-
+      cout << endl << "Please Enter the Field to Add : ";
+      cin >> field;
+      while(1){
+        error_checker = add_self_defined(employees, self_defined_fields, field_name, default_value);
+        if(error_checker == -1){
+          cout << endl << "This field name already exist" << endl;
+          cout << endl << "Please Enter the Field Name to Add : ";
+          cin >> field;
+        }
+        else if(error_checker == 0){
+          cout << "Field Added" << endl;
+          break;
+        }
+      }
     }
     // Delete self-defined
     else if(input_choice == 8){

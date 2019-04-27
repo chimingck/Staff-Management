@@ -203,7 +203,7 @@ int add_self_defined(vector<Record> &employees, vector<string> &self_defined_fie
   return 0;
 }
 
-// ***Provided 2 similar functions here. Choose the one that you find it convinient and you can delete the another one.***
+// ***Provided 2 similar functions here.***
 
 // return 0 if the attriute/field is deleted successfully.
 // return -1 if there is no existing self-defined field/attribute with specified name. 
