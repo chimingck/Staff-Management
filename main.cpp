@@ -394,7 +394,7 @@ int main()
           break;
         }
         else{
-          cout << endl << "Please choose from the above 3 ways : " << endl;
+          cout << endl << "Please choose from the above 3 ways : ";
           cin >> way;
         }
       }
