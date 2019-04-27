@@ -254,14 +254,6 @@ int main()
       cout << endl << "Type '0' to Return to Main Menu : ";
     }
     else if(input_choice == 2){
-      int field = 0;
-      string key = 0;
-      cout << endl << "Please Enter the Searching Field : ";
-      cin >> field;
-      cout << endl << "Please Enter the Keyword : ";
-      cin >> key;
-      cout << endl << endl << endl << endl;
-      cout << "Search Result : " << endl << endl;
       
     }
     else if(input_choice == 3){
