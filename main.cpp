@@ -20,42 +20,48 @@ void function_display(const vector<string> &self_defined_fields, int input_choic
     
     // Function 1
     cout << left << setw(4) << "1."
-         << left << setw(30) << "Display All Employees"
-         << left << setw(100) << "To Display All Details (e.g. Name, Role...) of All Employees."
+         << left << setw(30) << "Create Employee"
+         << left << setw(100) << "To Add an Employees."
          << endl;
 
     // Function 2
     cout << left << setw(4) << "2."
+         << left << setw(30) << "Display All Employees"
+         << left << setw(100) << "To Display All Details (e.g. Name, Role...) of All Employees."
+         << endl;
+
+    // Function 3
+    cout << left << setw(4) << "3."
          << left << setw(30) << "Search Employee(s)"
          << left << setw(100) << "To Get a List of Employee(s) by a Field (e.g. ID, Name, Age, Role...)."
          << endl;
 
-    //Function 3
-    cout << left << setw(4) << "3."
+    //Function 4
+    cout << left << setw(4) << "4."
          << left << setw(30) << "Search Employee(s) by Salary"
          << left << setw(100) << "To Get a List of Employee(s) by Salary (More than, Below, Between)."
          << endl;
 
-    // Function 4
-    cout << left << setw(4) << "4."
+    // Function 5
+    cout << left << setw(4) << "5."
          << left << setw(30) << "Fire Employee"
          << left << setw(100) << "To Fire an Employee by the Staff ID."
          << endl;
     
-    //Function 5
-    cout << left << setw(4) << "5."
+    //Function 6
+    cout << left << setw(4) << "6."
          << left << setw(30) << "Modify Employee Info."
          << left << setw(100) << "To Modify an Employee's Information by the Staff ID."
          << endl;
     
-    //Function 6
-    cout << left << setw(4) << "6."
+    //Function 7
+    cout << left << setw(4) << "7."
          << left << setw(30) << "Add Self-defined Field"
          << left << setw(100) << "To Add a Self-defined Field to the Staff Records."
          << endl;
     
-    //Function 7
-    cout << left << setw(4) << "7."
+    //Function 8
+    cout << left << setw(4) << "8."
          << left << setw(30) << "Delete Self-defined Field"
          << left << setw(100) << "To Delete a Self-defined Field from the Staff Records."
          << endl;
@@ -70,10 +76,14 @@ void function_display(const vector<string> &self_defined_fields, int input_choic
 
   }
   else if(input_choice == 1){
-    cout << endl << "Displaying All Employees" << endl;
+    cout << endl << "Creating Employee" << endl;
     cout << endl;
   }
   else if(input_choice == 2){
+    cout << endl << "Displaying All Employees" << endl;
+    cout << endl;
+  }
+  else if(input_choice == 3){
     cout << "Searching Employee(s)" << endl;
     cout << "You may use the following field to search : " << endl << endl;
 
@@ -97,10 +107,8 @@ void function_display(const vector<string> &self_defined_fields, int input_choic
          << left << setw(6) << "Role"
          << endl;
   }
-  else if(input_choice == 3){
-
-  }
   else if(input_choice == 4){
+    cout << "Searching Employee(s) by Salary" << endl;
 
   }
   else if(input_choice == 5){
@@ -110,6 +118,9 @@ void function_display(const vector<string> &self_defined_fields, int input_choic
 
   }
   else if(input_choice == 7){
+
+  }
+  else if(input_choice == 8){
 
   }
 }
@@ -248,8 +259,18 @@ int main()
 
   cout << endl << endl << endl << endl << endl;
  
-
+  // For while loop
   int input_choice = 0;
+  int error_checker = 0;
+
+  // For choice 1
+  string id;
+  string name;
+  int age;
+  string role;
+  double salary;
+
+  // For choice 2
   int field;
   string key;
 
@@ -264,10 +285,36 @@ int main()
       cout << "";
     }
     else if(input_choice == 1){
+      cout << endl << "Please Enter the Employee's Information : ";
+      cout << endl << "ID : ";
+      cin >> id;
+      cout << endl << "Name : ";
+      cin >> name;
+      cout << endl << "Age : ";
+      cin >> age;
+      cout << endl << "Role : ";
+      cin >> role;
+      cout << endl << "Salary : ";
+      cin >> salary;
+      clear_screen();
+      error_checker = create_employee(employees, id, name, age, role, salary);
+      if (error_checker == 0){
+        cout << "Employee Created" << endl;
+      }
+      else if (error_checker == -1){
+        cout << "There is existing employee with same ID." << endl;
+        cout << "Employee NOT Created" << endl;
+      }
+      else if (error_checker == -2){
+        cout << "The Age/Salary is less than 0, or ID/Name/Role is empty." << endl;
+        cout << "Employee NOT Created" << endl;
+      }
+    }
+    else if(input_choice == 2){
       display_all_employees(employees, self_defined_fields);
       cout << endl << "Type '0' to Return to Main Menu : ";
     }
-    else if(input_choice == 2){
+    else if(input_choice == 3){
       cout << endl << "Please Enter the Searching Field : ";
       cin >> field;
       cout << "Please Enter the Keyword : ";
@@ -282,9 +329,6 @@ int main()
       }
       cout << endl << "Type '0' to Return to Main Menu : ";
     }
-    else if(input_choice == 3){
-
-    }
     else if(input_choice == 4){
 
     }
@@ -297,6 +341,9 @@ int main()
     else if(input_choice == 7){
 
     }
+    else if(input_choice == 8){
+
+    }
     else if(input_choice == -1){
       cout << "***___SYSTEM TERMINATED___***" << endl;
       cout << "    ***___THANK YOU___***    " << endl;
@@ -305,6 +352,7 @@ int main()
     }
     else{
       cout << "Error, please enter number from the Function List." << endl << endl;
+      cout << endl << "Type '0' to Return to Main Menu : ";
     }
   }
 
