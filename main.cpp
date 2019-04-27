@@ -143,7 +143,7 @@ void function_display(const vector<string> &self_defined_fields, int input_choic
     cout << endl;
   }
   else if(input_choice == 8){
-    cout << "Adding a Self-defined Field" << endl;
+    cout << "Deleting a Self-defined Field" << endl;
     cout << endl;
     cout << left << setw(4) << "1." 
          << left << setw(16) << "Delete by Name"
