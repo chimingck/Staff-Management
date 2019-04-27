@@ -253,7 +253,7 @@ int main()
       cout << "    ***___GOOD  BYE___***    " << endl;
       break;
     }
-    else if{
+    else{
       cout << "Error, please enter number from the Function List." << endl << endl;
       input_choice = 0;
     }
