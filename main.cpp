@@ -269,6 +269,10 @@ int main()
       cout << left << setw(6) << "INDEX" << left << setw(13) << "ID"
            << left << setw(21) << "NAME" << left << setw(4) << "AGE"
            << left << setw(21) << "ROLE" << left << setw(11) << "SALARY";
+      for (auto s : self_defined_fields)
+        cout << left << setw(s.size()+6) << s;
+      cout << endl;
+
       vector<int> ids = search_employee(employees, field, key);
       for (auto i : ids){
         display_employee(employees, self_defined_fields, i);
