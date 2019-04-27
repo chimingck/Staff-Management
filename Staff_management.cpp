@@ -85,7 +85,7 @@ vector<int> search_employee(const vector<Record> &employees, int field, string k
 // return 0 if employee is created successfully.
 // return -1 if there is an existing employee with same id.
 // return -2 if the age/salary is less than 0, or id/name/role is empty. Employee not created.
-int create_employee(vector<Record> &employees, string id,string name, int age, string role, double salary)
+int create_employee(vector<Record> &employees, const vector<string> &self_defined_fields, string id,string name, int age, string role, double salary)
 {
   if (age < 0 || salary < 0 || id.empty() || name.empty() || role.empty())
     return -2; // invalid parameter(s)

@@ -26,7 +26,7 @@ void display_all_employees(const std::vector<Record> &employees, const std::vect
 
 std::vector<int> search_employee(const std::vector<Record> &employees, int field, std::string key);
 
-int create_employee(std::vector<Record> &employees, std::string id,std::string name, int age, std::string role, double salary);
+int create_employee(std::vector<Record> &employees, const std::vector<std::string> &self_defined_fields, std::string id,std::string name, int age, std::string role, double salary);
 
 int fire_employee(std::vector<Record> &employees, int index);
 
