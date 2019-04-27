@@ -289,15 +289,15 @@ int main()
     // CREATE
     else if(input_choice == 1){
       cout << endl << "Please Enter the Employee's Information : " << endl << endl;
-      cout << "ID : ";
+      cout << left << setw(7) << "ID" << ": ";
       cin >> id;
-      cout << "Name : ";
+      cout << left << setw(7) << "Name" << ": ";
       cin >> name;
-      cout << "Age : ";
+      cout << left << setw(7) << "ID" << ": ";
       cin >> age;
-      cout << "Role : ";
+      cout << left << setw(7) << "Role" << ": ";
       cin >> role;
-      cout << "Salary : ";
+      cout << left << setw(7) << "Salary" << ": ";
       cin >> salary;
 
       clear_screen();
